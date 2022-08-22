@@ -1,0 +1,26 @@
+{
+	"name": "Zarpent",
+	"catch_rate": 225,
+	"abilities": {
+		"Statik": 5,
+		"Paratonerre": 5
+	},
+	"attacks": {
+		"Eclair": 0,
+		"Jet de Sable": 0,
+		"Cage Eclair": 3,
+		"Chargeur": 5,
+		"Etreinte": 7
+	},
+	"types": [
+		"Electrik"
+	],
+	"stats": {
+		"pv": 30,
+		"atk": 50,
+		"atkspe": 60,
+		"def": 30,
+		"defspe": 40,
+		"spe": 80
+	}
+}

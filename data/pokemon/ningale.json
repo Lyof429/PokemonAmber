@@ -1,0 +1,34 @@
+{
+	"name": "Ningale",
+	"gender": 0.5,
+	"catch_rate": 255,
+	"abilities": {
+		"Oeuil Compose": 10,
+		"Fuite": 1
+	},
+	"attacks": {
+		"Armure": 0,
+		"Griffe": 0,
+		"Vol-Vie": 5,
+		"Jet de Sable": 9,
+		"Combo-Griffes": 13,
+		"Coud'Boue": 17,
+		"Griffe Acier": 21,
+		"Lire-Esprit": 25,
+		"Patience": 29,
+		"Faux-Chage": 33,
+		"Tunnel": 37
+	},
+	"types": [
+		"Insecte",
+		"Sol"
+	],
+	"stats": {
+		"pv": 31,
+		"atk": 45,
+		"atkspe": 30,
+		"def": 90,
+		"defspe": 30,
+		"spe": 40
+	}
+}

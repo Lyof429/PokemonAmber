@@ -1,0 +1,27 @@
+{
+	"name": "Microu",
+	"gender": 0.4,
+	"catch_rate": 255,
+	"abilities": {
+		"Brise-Moule": 10,
+		"Technicien": 1
+	},
+	"attacks": {
+		"Griffe": 0,
+		"Affutage": 0,
+		"Boul'Armure": 4,
+		"Sabotage": 9,
+		"Pisto-Poing": 13
+	},
+	"types": [
+		"Normal"
+	],
+	"stats": {
+		"pv": 70,
+		"atk": 35,
+		"atkspe": 30,
+		"def": 65,
+		"defspe": 59,
+		"spe": 25
+	}
+}

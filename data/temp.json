@@ -1,0 +1,26 @@
+{
+    "info": {
+        "name": "Skitty",
+        "nickname": "",
+        "other": "",
+        "gender": "\u2642",
+        "level": 2
+    },
+    "fight": {
+        "ability": "Normalise",
+        "attacks": [
+            "Rugissement",
+            "Bluff",
+            "Mimi-Queue",
+            "Charge"
+        ],
+        "stats": {
+            "pv": 52,
+            "atk": 47,
+            "atkspe": 42,
+            "def": 47,
+            "defspe": 42,
+            "spe": 42
+        }
+    }
+}

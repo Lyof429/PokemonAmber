@@ -1,0 +1,46 @@
+{
+	"name": "Skitty",
+	"variants": {
+		"": 9,
+		" Colombani": 1
+		},
+	"gender": 0.75,
+	"catch_rate": 255,
+	"abilities": {
+		"Joli Sourire": 5,
+		"Normalise": 5,
+		"Peau Miracle": 1
+	},
+	"attacks": {
+		"Bluff": 0,
+		"Charge": 0,
+		"Mimi-Queue": 0,
+		"Rugissement": 0,
+		"Clairvoyance": 4,
+		"Berceuse": 7,
+		"Attraction": 10,
+		"Voix Enjoleuse": 13,
+		"Torgnoles": 16,
+		"Photocopie": 19,
+		"Feinte": 22,
+		"Charme": 25,
+		"Reveil Force": 28,
+		"Assistance": 31,
+		"Implore": 34,
+		"Glas de Soin": 37,
+		"Damocles": 40,
+		"Seduction": 43,
+		"Calinerie": 46
+	},
+	"types": [
+		"Normal"
+	],
+	"stats": {
+		"pv": 50,
+		"atk": 45,
+		"atkspe": 40,
+		"def": 45,
+		"defspe": 40,
+		"spe": 40
+	}
+}

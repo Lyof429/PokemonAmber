@@ -1,0 +1,37 @@
+{
+	"name": "Fouinette",
+	"gender": 0.5,
+	"catch_rate": 255,
+	"abilities": {
+		"Fuite": 5,
+		"Regard Vif": 5,
+		"Fouille": 1
+	},
+	"attacks": {
+		"Clairvoyance": 0,
+		"Griffe": 0,
+		"Boul'Armure": 4,
+		"Vive-Attaque": 7,
+		"Combo-Griffe": 13,
+		"Coup d'Main": 16,
+		"Par Ici": 19,
+		"Souplesse": 25,
+		"Repos": 28,
+		"Coup Bas": 31,
+		"Amnésie": 36,
+		"Relais": 39,
+		"Moi d'Abord": 42,
+		"Mégaphone": 47
+	},
+	"types": [
+		"Normal"
+	],
+	"stats": {
+		"pv": 35,
+		"atk": 46,
+		"atkspe": 35,
+		"def": 34,
+		"defspe": 45,
+		"spe": 20
+	}
+}

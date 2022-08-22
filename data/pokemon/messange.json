@@ -1,0 +1,22 @@
+{
+	"name": "Messange",
+	"gender": 0.5,
+	"catch_rate": 255,
+	"abilities": {
+		"Turbo": 10
+	},
+	"attacks": {
+	},
+	"types": [
+		"Normal",
+		"Vol"
+	],
+	"stats": {
+		"pv": 35,
+		"atk": 46,
+		"atkspe": 35,
+		"def": 34,
+		"defspe": 45,
+		"spe": 20
+	}
+}

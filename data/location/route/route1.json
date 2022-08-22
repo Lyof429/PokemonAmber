@@ -1,0 +1,15 @@
+{
+	"name": "Route 1",
+	"pokemons": {
+		"Microu": 25,
+		"Zarpent": 15,
+		"Fouinette": 20,
+		"Messange": 25,
+		"Ningale": 5,
+		"Skitty": 10
+	},
+	"level_range": {
+		"min": 2,
+		"max": 4
+	}
+}
