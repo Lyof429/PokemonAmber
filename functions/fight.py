@@ -31,21 +31,61 @@ def genWild(place):
     ability = chance(poke_data['abilities'])
     
     print(f'{name}{bonus}{gender} -  Lv {lvl}\n{ability}  |  {attacks}\n')
-    RESULT = {'info': {'name': name, 'nickname': '', 'other': bonus, 'gender': gender.replace(' ', ''), 'level': lvl}, 'fight': {'ability': ability, 'attacks': attacks.split(' - '), 'stats': {}}}
+    RESULT = {'info': {'name': name, 'nickname': '', 'other': bonus, 'gender': gender.replace(' ', '')},
+              'leveling': {'level': lvl, 'xp': 0, 'type': poke_data['level_type'] if 'level_type' in poke_data.keys() else 'simple'},
+              'fight': {'ability': ability, 'attacks': attacks.split(' - '), 'stats': {}}}
     setdata('data/temp.json', RESULT)
     lvlstat()
     return RESULT
 
 def lvlstat(path = 'data/temp.json'):
     name = getdata(path)['info']['name']
-    pokemon_data = getdata(f'data/pokemon/{name.lower()}.json')
+    poke_data = getdata(f'data/pokemon/{name.lower()}.json')
     temp_data = getdata(path)
-    for stat in pokemon_data['stats'].keys():
-        temp_data['fight']['stats'][stat] = 2*(temp_data['info']['level']-1) + pokemon_data['stats'][stat]
+    for stat in poke_data['stats'].keys():
+        temp_data['fight']['stats'][stat] = 2*(temp_data['leveling']['level']-1) + poke_data['stats'][stat]
     setdata(path, temp_data)
 
+def addxp(amount, path = 'data/temp.json'):
+    poke_data = getdata(path)
+    need = getxpneed(poke_data)
+    poke_data['leveling']['xp'] += amount
+
+    attacks = reverse(getdata(f'data/pokemon/{poke_data["info"]["name"].lower()}.json')['attacks'])
+    while poke_data['leveling']['xp'] >= need:
+        poke_data['leveling']['xp'] -= need
+        poke_data['leveling']['level'] += 1
+        print(f'{poke_data["info"]["name"]} passe au niveau {poke_data["leveling"]["level"]}!')
+
+        if poke_data['leveling']['level'] in attacks.keys():
+            newattack = attacks[poke_data['leveling']['level']]
+            if len(poke_data['fight']['attacks']) < 4:
+                poke_data['fight']['attacks'].append(newattack)
+                print(f'{poke_data["info"]["name"]} apprend {newattack}!')
+            else:
+                oldattack = input(f'{poke_data["info"]["name"]} veut apprendre {newattack}. Mais {poke_data["info"]["name"]} connait déjà 4 capacités.\nVoulez vous remplacer une capacité par {newattack}?     {each(poke_data["fight"]["attacks"])}\n')
+                if oldattack in poke_data['fight']['attacks']:
+                    del(poke_data['fight']['attacks'][poke_data['fight']['attacks'].index(oldattack)])
+                    poke_data['fight']['attacks'].append(newattack)
+                    print(f'{poke_data["info"]["name"]} oublie {oldattack} et apprend {newattack}!')
+                else:
+                    print(f'{poke_data["info"]["name"]} n\'a pas appris {newattack}.')
+
+        need = getxpneed(poke_data)
+    setdata(path, poke_data)
+    lvlstat(path)
+
+def getxpneed(poke_data):
+    if poke_data['leveling']['type'] == 'simple':
+        need = poke_data['leveling']['level'] ** 3
+    elif poke_data['leveling']['type'] == 'fast':
+        need = 0.8 * (poke_data['leveling']['level'] ** 3)
+    elif poke_data['leveling']['type'] == 'slow':
+        need = 1.2 * (poke_data['leveling']['level'] ** 3)
+    return need
+
 def getDamage(lv, att, déf, puis, cm):
-    return round((((lv*0.4+2)*att*puis)/(déf*50)+2)*cm*randomize(0.85, 1))       #(random()*0.15+0.85)
+    return round((((lv*0.4+2)*att*puis)/(déf*50)+2)*cm*randomize(0.85, 1))
 
 def getCatch(pvnow, pvmax, ball, status, trainer = None):
     if trainer != None:
@@ -79,4 +119,5 @@ def getCatch(pvnow, pvmax, ball, status, trainer = None):
         setdata(f'users/{trainer["name"]}/pokemons/{trainer["poke_index"]}.json', pokemon)
         trainer['poke_index'] += 1
         setdata(f'users/{trainer["name"]}/info.json', trainer)
+    print('\n')
     return result

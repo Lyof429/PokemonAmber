@@ -1,26 +1,28 @@
 {
     "info": {
-        "name": "Skitty",
+        "name": "Fouinette",
         "nickname": "",
         "other": "",
-        "gender": "\u2642",
-        "level": 2
+        "gender": "\u2642"
+    },
+    "leveling": {
+        "level": 2,
+        "xp": 0,
+        "type": "simple"
     },
     "fight": {
-        "ability": "Normalise",
+        "ability": "Regard Vif",
         "attacks": [
-            "Rugissement",
-            "Bluff",
-            "Mimi-Queue",
-            "Charge"
+            "Griffe",
+            "Clairvoyance"
         ],
         "stats": {
-            "pv": 52,
-            "atk": 47,
-            "atkspe": 42,
-            "def": 47,
-            "defspe": 42,
-            "spe": 42
+            "pv": 37,
+            "atk": 48,
+            "atkspe": 37,
+            "def": 36,
+            "defspe": 47,
+            "spe": 22
         }
     }
 }

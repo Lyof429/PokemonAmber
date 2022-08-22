@@ -10,6 +10,14 @@ def chance(d):
 def randomize(mini, maxi):
     return random()*(maxi-mini) + mini
 
+def reverse(dict):
+    return {i: a for a, i in dict.items()}
+
+def each(l):
+    result = ''
+    for i in l:
+        result += f'{i} - '
+    return result[0:len(result)-3]
 def getdata(path):
     return load(open(path))
 

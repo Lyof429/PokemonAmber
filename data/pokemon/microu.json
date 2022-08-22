@@ -2,6 +2,7 @@
 	"name": "Microu",
 	"gender": 0.4,
 	"catch_rate": 255,
+	"level_type": "fast",
 	"abilities": {
 		"Brise-Moule": 10,
 		"Technicien": 1
