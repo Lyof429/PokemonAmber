@@ -115,9 +115,9 @@ def getCatch(pvnow, pvmax, ball, status, trainer = None):
         pokemon = getdata('data/temp.json')
         pokemon['info']['ball'] = ball
         pokemon['info']['nickname'] = input(f'Entrez le nom de votre {pokemon["info"]["name"]}: ')
-        trainer = getdata(f'users/{trainer}/info.json')
-        setdata(f'users/{trainer["name"]}/pokemons/{trainer["poke_index"]}.json', pokemon)
-        trainer['poke_index'] += 1
-        setdata(f'users/{trainer["name"]}/info.json', trainer)
+        trainer = getdata(f'users/{trainer.lower()}.json')
+        setdata(f'users/pokemons/{trainer["info"]["name"]}.{trainer["info"]["poke_index"]}.json', pokemon)
+        trainer["info"]['poke_index'] += 1
+        setdata(f'users/{trainer["info"]["name"]}.json', trainer)
     print('\n')
     return result

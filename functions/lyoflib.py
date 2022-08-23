@@ -13,11 +13,11 @@ def randomize(mini, maxi):
 def reverse(dict):
     return {i: a for a, i in dict.items()}
 
-def each(l):
+def each(l, sep = ' - '):
     result = ''
     for i in l:
-        result += f'{i} - '
-    return result[0:len(result)-3]
+        result += f'{i}{sep}'
+    return result[0:len(result)-len(sep)]
 def getdata(path):
     return load(open(path))
 

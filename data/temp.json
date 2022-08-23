@@ -1,28 +1,27 @@
 {
     "info": {
-        "name": "Fouinette",
+        "name": "Messange",
         "nickname": "",
         "other": "",
-        "gender": "\u2642"
+        "gender": "\u2640"
     },
     "leveling": {
-        "level": 2,
+        "level": 4,
         "xp": 0,
         "type": "simple"
     },
     "fight": {
-        "ability": "Regard Vif",
+        "ability": "Turbo",
         "attacks": [
-            "Griffe",
-            "Clairvoyance"
+            ""
         ],
         "stats": {
-            "pv": 37,
-            "atk": 48,
-            "atkspe": 37,
-            "def": 36,
-            "defspe": 47,
-            "spe": 22
+            "pv": 41,
+            "atk": 52,
+            "atkspe": 41,
+            "def": 40,
+            "defspe": 51,
+            "spe": 26
         }
     }
 }
