@@ -18,7 +18,7 @@ def each(l, sep = ' - '):
     for i in l:
         result += f'{i}{sep}'
     return result[0:len(result)-len(sep)]
-def getdata(path):
+def getdata(path = 'data/temp.json'):
     return load(open(path))
 
 def setdata(path, value):

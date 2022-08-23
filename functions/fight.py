@@ -89,13 +89,13 @@ def getDamage(lv, att, déf, puis, cm):
 
 def getCatch(pvnow, pvmax, ball, status, trainer = None):
     if trainer != None:
-        if has(trainer, ball):
-            add(trainer, ball, -1)
+        if account.has(trainer, ball):
+            account.add(trainer, ball, -1)
         else:
             print(f"Vous n'avez plus de {upfirst(ball)}s!")
             return False
     
-    pokemon = getdata('data/temp.json')['info']['name']
+    pokemon = getdata()['info']['name']
     a = (1-(2/3)*(pvnow/pvmax))*getdata(f'data/pokemon/{pokemon.lower()}.json')['catch_rate']*getdata(f'data/item/ball/{ball.lower()}.json')['catch_bonus']*status
     b, n = 65535*((a/255)**0.25), 0
     for i in range(4):
@@ -112,7 +112,7 @@ def getCatch(pvnow, pvmax, ball, status, trainer = None):
         result = False
     
     if trainer != None and result:
-        pokemon = getdata('data/temp.json')
+        pokemon = getdata()
         pokemon['info']['ball'] = ball
         pokemon['info']['nickname'] = input(f'Entrez le nom de votre {pokemon["info"]["name"]}: ')
         trainer = getdata(f'users/{trainer.lower()}.json')
