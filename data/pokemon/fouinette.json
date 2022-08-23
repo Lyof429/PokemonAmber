@@ -18,10 +18,10 @@
 		"Souplesse": 25,
 		"Repos": 28,
 		"Coup Bas": 31,
-		"Amnésie": 36,
+		"Amnesie": 36,
 		"Relais": 39,
 		"Moi d'Abord": 42,
-		"Mégaphone": 47
+		"Megaphone": 47
 	},
 	"types": [
 		"Normal"

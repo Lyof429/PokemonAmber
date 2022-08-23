@@ -4,14 +4,15 @@ def create(trainer):
     if not os.path.exists(f'users/{trainer.lower()}.json'):
         setdata(f'users/{trainer.lower()}.json', {'info': {'name': trainer.lower(), 'poke_index': 0}, 'bag': {'pokeball': 5}})
 def delete(trainer):
-    reset(trainer)
+    reset(trainer, True)
     os.remove(f'users/{trainer.lower()}.json')
 
-def reset(trainer):
-    index = getdata(f'users/{trainer.lower()}.json')['info']['poke_index']
-    for i in range(index):
-        os.remove(f'users/pokemons/{trainer.lower()}.{i}.json')
-    setdata(f'users/{trainer.lower()}.json', {'info': {'name': trainer, 'poke_index': 0}, 'bag': {}})
+def reset(trainer, delete = False):
+    if delete:
+        index = getdata(f'users/{trainer.lower()}.json')['info']['poke_index']
+        for i in range(index):
+            os.remove(f'users/pokemons/{trainer.lower()}.{i}.json')
+    setdata(f'users/{trainer.lower()}.json', {'info': {'name': trainer, 'poke_index': 0}, 'bag': {'pokeball': 5}})
 
 def add(trainer, item, amount = 1):
     trainer = getdata(f'users/{trainer.lower()}.json')

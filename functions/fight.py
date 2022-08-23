@@ -1,7 +1,7 @@
 from functions.libs import *
 
-def genWild(place):
-    place_data = getdata(f'data/location/{place}')
+def generate(place):
+    place_data = getdata(f'data/location/{place}.json')
     
     
     name = chance(place_data['pokemons'])
@@ -53,6 +53,10 @@ def addxp(amount, path = 'data/temp.json'):
 
     attacks = reverse(getdata(f'data/pokemon/{poke_data["info"]["name"].lower()}.json')['attacks'])
     while poke_data['leveling']['xp'] >= need:
+        if poke_data['leveling']['level'] >= 100:
+            poke_data['leveling']['level'] = 100
+            break
+
         poke_data['leveling']['xp'] -= need
         poke_data['leveling']['level'] += 1
         print(f'{poke_data["info"]["name"]} passe au niveau {poke_data["leveling"]["level"]}!')
@@ -87,7 +91,7 @@ def getxpneed(poke_data):
 def getDamage(lv, att, déf, puis, cm):
     return round((((lv*0.4+2)*att*puis)/(déf*50)+2)*cm*randomize(0.85, 1))
 
-def getCatch(pvnow, pvmax, ball, status, trainer = None):
+def catch(pvnow, pvmax, ball, status, trainer = None):
     if trainer != None:
         if account.has(trainer, ball):
             account.add(trainer, ball, -1)

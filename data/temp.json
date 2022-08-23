@@ -1,9 +1,9 @@
 {
     "info": {
-        "name": "Messange",
+        "name": "Fouinette",
         "nickname": "",
         "other": "",
-        "gender": "\u2640"
+        "gender": "\u2642"
     },
     "leveling": {
         "level": 4,
@@ -11,9 +11,11 @@
         "type": "simple"
     },
     "fight": {
-        "ability": "Turbo",
+        "ability": "Fuite",
         "attacks": [
-            ""
+            "Clairvoyance",
+            "Boul'Armure",
+            "Griffe"
         ],
         "stats": {
             "pv": 41,
