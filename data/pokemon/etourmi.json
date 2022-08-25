@@ -1,0 +1,35 @@
+{
+	"name": "Etourmi",
+	"gender": 0.5,
+	"catch_rate": 255,
+	"abilities": {
+		"Regard Vif": 10,
+		"Temeraire": 1
+	},
+	"attacks": {
+		"Charge": 0,
+		"Rugissement": 0,
+		"Vive-Attaque": 5,
+		"Cru-Aile": 9,
+		"Reflet": 13,
+		"Effort": 17,
+		"Cyclone": 21,
+		"Aeropique": 25,
+		"Belier": 29,
+		"Hate": 33,
+		"Rapace": 37,
+		"Tout ou Rien": 41
+	},
+	"types": [
+		"Normal",
+		"Vol"
+	],
+	"stats": {
+		"pv": 40,
+		"atk": 55,
+		"atkspe": 30,
+		"def": 30,
+		"defspe": 30,
+		"spe": 60
+	}
+}

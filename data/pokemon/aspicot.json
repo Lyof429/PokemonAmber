@@ -1,0 +1,27 @@
+{
+	"name": "Aspicot",
+	"gender": 0.5,
+	"catch_rate": 255,
+	"level_type": "fast",
+	"abilities": {
+		"Ecran Poudre": 10,
+		"Fuite": 1
+	},
+	"attacks": {
+		"Dard Venin": 0,
+		"Secretion": 0,
+		"Piqure": 9
+	},
+	"types": [
+		"Insecte",
+		"Poison"
+	],
+	"stats": {
+		"pv": 40,
+		"atk": 35,
+		"atkspe": 20,
+		"def": 30,
+		"defspe": 20,
+		"spe": 50
+	}
+}

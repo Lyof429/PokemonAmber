@@ -1,29 +1,30 @@
 {
     "info": {
-        "name": "Fouinette",
+        "name": "Zarpent",
         "nickname": "",
         "other": "",
-        "gender": "\u2642"
+        "gender": ""
     },
     "leveling": {
-        "level": 4,
-        "xp": 0,
+        "level": 15,
+        "xp": 1011,
         "type": "simple"
     },
     "fight": {
-        "ability": "Fuite",
+        "ability": "Paratonerre",
         "attacks": [
-            "Clairvoyance",
-            "Boul'Armure",
-            "Griffe"
+            "Cage Eclair",
+            "Eclair",
+            "Jet de Sable",
+            "Chargeur"
         ],
         "stats": {
-            "pv": 41,
-            "atk": 52,
-            "atkspe": 41,
-            "def": 40,
-            "defspe": 51,
-            "spe": 26
+            "pv": 50,
+            "atk": 78,
+            "atkspe": 88,
+            "def": 58,
+            "defspe": 68,
+            "spe": 108
         }
     }
 }

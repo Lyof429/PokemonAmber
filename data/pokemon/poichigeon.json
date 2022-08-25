@@ -1,0 +1,39 @@
+{
+	"name": "Poichigeon",
+	"gender": 0.5,
+	"catch_rate": 255,
+	"abilities": {
+		"Coeur de Coq": 5,
+		"Chanceux": 5,
+		"Rivalite": 1
+	},
+	"attacks": {
+		"Tornade": 0,
+		"Rugissement": 4,
+		"Groz'Yeux": 8,
+		"Vive-Attaque": 11,
+		"Tranch'Air": 15,
+		"Atterrissage": 18,
+		"Detection": 22,
+		"Provoc": 25,
+		"Lame d'Air": 29,
+		"Coupe-Vent": 32,
+		"Danse-Plumes": 36,
+		"Vantardise": 39,
+		"Facade": 43,
+		"Vent Arriere": 46,
+		"Pique": 50
+	},
+	"types": [
+		"Normal",
+		"Vol"
+	],
+	"stats": {
+		"pv": 50,
+		"atk": 55,
+		"atkspe": 36,
+		"def": 50,
+		"defspe": 30,
+		"spe": 43
+	}
+}

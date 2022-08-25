@@ -35,16 +35,8 @@ def generate(place):
               'leveling': {'level': lvl, 'xp': 0, 'type': poke_data['level_type'] if 'level_type' in poke_data.keys() else 'simple'},
               'fight': {'ability': ability, 'attacks': attacks.split(' - '), 'stats': {}}}
     setdata('data/temp.json', RESULT)
-    lvlstat()
+    refreshstats()
     return RESULT
-
-def lvlstat(path = 'data/temp.json'):
-    name = getdata(path)['info']['name']
-    poke_data = getdata(f'data/pokemon/{name.lower()}.json')
-    temp_data = getdata(path)
-    for stat in poke_data['stats'].keys():
-        temp_data['fight']['stats'][stat] = 2*(temp_data['leveling']['level']-1) + poke_data['stats'][stat]
-    setdata(path, temp_data)
 
 def addxp(amount, path = 'data/temp.json'):
     poke_data = getdata(path)
@@ -60,6 +52,8 @@ def addxp(amount, path = 'data/temp.json'):
         poke_data['leveling']['xp'] -= need
         poke_data['leveling']['level'] += 1
         print(f'{poke_data["info"]["name"]} passe au niveau {poke_data["leveling"]["level"]}!')
+        for stat in poke_data['fight']['stats'].keys():
+            poke_data['fight']['stats'][stat] += 2
 
         if poke_data['leveling']['level'] in attacks.keys():
             newattack = attacks[poke_data['leveling']['level']]
@@ -77,7 +71,7 @@ def addxp(amount, path = 'data/temp.json'):
 
         need = getxpneed(poke_data)
     setdata(path, poke_data)
-    lvlstat(path)
+    #refreshstats(path)
 
 def getxpneed(poke_data):
     if poke_data['leveling']['type'] == 'simple':
@@ -88,10 +82,24 @@ def getxpneed(poke_data):
         need = 1.2 * (poke_data['leveling']['level'] ** 3)
     return need
 
+def refreshstats(path = 'data/temp.json'):
+    name = getdata(path)['info']['name']
+    poke_data = getdata(f'data/pokemon/{name.lower()}.json')
+    temp_data = getdata(path)
+    for stat in poke_data['stats'].keys():
+        temp_data['fight']['stats'][stat] = maxstat(stat, path)
+    setdata(path, temp_data)
+
+def maxstat(stat, path = 'data/temp.json'):
+    name = getdata(path)['info']['name']
+    poke_data = getdata(f'data/pokemon/{name.lower()}.json')
+    temp_data = getdata(path)
+    return 2*(temp_data['leveling']['level']-1) + poke_data['stats'][stat]
+
 def getDamage(lv, att, déf, puis, cm):
     return round((((lv*0.4+2)*att*puis)/(déf*50)+2)*cm*randomize(0.85, 1))
 
-def catch(pvnow, pvmax, ball, status, trainer = None):
+def catch(ball, status, trainer = None):
     if trainer != None:
         if account.has(trainer, ball):
             account.add(trainer, ball, -1)
@@ -100,6 +108,7 @@ def catch(pvnow, pvmax, ball, status, trainer = None):
             return False
     
     pokemon = getdata()['info']['name']
+    pvnow, pvmax = getdata()['fight']['stats']['pv'], maxstat('pv')
     a = (1-(2/3)*(pvnow/pvmax))*getdata(f'data/pokemon/{pokemon.lower()}.json')['catch_rate']*getdata(f'data/item/ball/{ball.lower()}.json')['catch_bonus']*status
     b, n = 65535*((a/255)**0.25), 0
     for i in range(4):
