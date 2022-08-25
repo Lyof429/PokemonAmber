@@ -1,0 +1,18 @@
+{
+	"name": "Foret Frayante - Oree",
+	"pokemons": {
+		"Zarpent": 10,
+		"Aspicot": 15,
+		"Apitrini": 10,
+		"Messange": 10,
+		"Fouinette": 20,
+		"Microu": 20,
+		"Ningale": 5,
+		"Etourmi": 10,
+		"Chetiflor": 10
+	},
+	"level_range": {
+		"min": 3,
+		"max": 6
+	}
+}

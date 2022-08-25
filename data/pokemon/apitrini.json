@@ -1,0 +1,28 @@
+{
+	"name": "Apitrini",
+	"gender": 0.125,
+	"catch_rate": 120,
+	"level_type": "normal",
+	"abilities": {
+		"Cherche Miel": 10,
+		"Agitation": 1
+	},
+	"attacks": {
+		"Doux Parfum": 0,
+		"Tornade": 0,
+		"Piqure": 13,
+		"Bourdon": 29
+	},
+	"types": [
+		"Insecte",
+		"Vol"
+	],
+	"stats": {
+		"pv": 30,
+		"atk": 30,
+		"atkspe": 30,
+		"def": 42,
+		"defspe": 42,
+		"spe": 70
+	}
+}

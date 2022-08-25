@@ -1,0 +1,38 @@
+{
+	"name": "Chetiflor",
+	"gender": 0.5,
+	"catch_rate": 255,
+	"level_type": "fast",
+	"abilities": {
+		"Chlorophylle": 10,
+		"Gloutonnerie": 1
+	},
+	"attacks": {
+		"Fouet Lianes": 0,
+		"Croissance": 7,
+		"Ligotage": 11,
+		"Poudre Dodo": 13,
+		"Poudre Toxik": 15,
+		"Para-Spore": 17,
+		"Acide": 23,
+		"Sabotage": 27,
+		"Doux Parfum": 29,
+		"Suc Digestif": 35,
+		"Tranch'Herbe": 39,
+		"Direct Toxik": 41,
+		"Souplesse": 47,
+		"Essorage": 50
+	},
+	"types": [
+		"Plante",
+		"Poison"
+	],
+	"stats": {
+		"pv": 50,
+		"atk": 75,
+		"atkspe": 70,
+		"def": 35,
+		"defspe": 30,
+		"spe": 70
+	}
+}
