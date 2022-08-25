@@ -1,6 +1,6 @@
 from functions.libs import *
 
-def generate(place):
+def generate(place, path = 'data/temp.json'):
     place_data = getdata(f'data/location/{place}.json')
     
     
@@ -30,12 +30,13 @@ def generate(place):
     
     ability = chance(poke_data['abilities'])
     
-    print(f'{name}{bonus}{gender} -  Lv {lvl}\n{ability}  |  {attacks}\n')
+    #print(f'{name}{bonus}{gender} -  Lv {lvl}\n{ability}  |  {attacks}\n')
+    print(f'Un {name}{bonus} (Lv {lvl}) sauvage apparait!')
     RESULT = {'info': {'name': name, 'nickname': '', 'other': bonus, 'gender': gender.replace(' ', '')},
               'leveling': {'level': lvl, 'xp': 0, 'type': poke_data['level_type'] if 'level_type' in poke_data.keys() else 'simple'},
               'fight': {'ability': ability, 'attacks': attacks.split(' - '), 'stats': {}}}
-    setdata('data/temp.json', RESULT)
-    refreshstats()
+    setdata(path, RESULT)
+    refreshstats(path)
     return RESULT
 
 def addxp(amount, path = 'data/temp.json'):
@@ -99,7 +100,7 @@ def maxstat(stat, path = 'data/temp.json'):
 def getDamage(lv, att, déf, puis, cm):
     return round((((lv*0.4+2)*att*puis)/(déf*50)+2)*cm*randomize(0.85, 1))
 
-def catch(ball, status, trainer = None):
+def catch(ball, trainer = None, path = 'data/temp.json'):
     if trainer != None:
         if account.has(trainer, ball):
             account.add(trainer, ball, -1)
@@ -107,8 +108,9 @@ def catch(ball, status, trainer = None):
             print(f"Vous n'avez plus de {upfirst(ball)}s!")
             return False
     
-    pokemon = getdata()['info']['name']
-    pvnow, pvmax = getdata()['fight']['stats']['pv'], maxstat('pv')
+    pokemon = getdata(path)['info']['name']
+    pvnow, pvmax = getdata(path)['fight']['stats']['pv'], maxstat('pv', path)
+    status = getdata(path)['fight']['status'] if 'status' in getdata(path)['fight'].keys() else 1
     a = (1-(2/3)*(pvnow/pvmax))*getdata(f'data/pokemon/{pokemon.lower()}.json')['catch_rate']*getdata(f'data/item/ball/{ball.lower()}.json')['catch_bonus']*status
     b, n = 65535*((a/255)**0.25), 0
     for i in range(4):
@@ -125,7 +127,7 @@ def catch(ball, status, trainer = None):
         result = False
     
     if trainer != None and result:
-        pokemon = getdata()
+        pokemon = getdata(path)
         pokemon['info']['ball'] = ball
         pokemon['info']['nickname'] = input(f'Entrez le nom de votre {pokemon["info"]["name"]}: ')
         trainer = getdata(f'users/{trainer.lower()}.json')
