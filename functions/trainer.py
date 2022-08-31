@@ -2,8 +2,10 @@ from functions.libs import *
 
 defaultbag = {'pokeball': 5, 'pokedollar': 1000}
 
+def exists(trainer):
+    return os.path.exists(f'users/{trainer.lower()}.json')
 def create(trainer):
-    if not os.path.exists(f'users/{trainer.lower()}.json'):
+    if not exists(trainer):
         setdata(f'users/{trainer.lower()}.json', {'info': {'name': trainer.lower(), 'poke_index': 0}, 'bag': defaultbag})
 def delete(trainer):
     reset(trainer, True)

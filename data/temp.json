@@ -6,24 +6,23 @@
         "gender": "\u2640"
     },
     "leveling": {
-        "level": 5,
+        "level": 3,
         "xp": 0,
         "type": "fast"
     },
     "fight": {
         "ability": "Brise-Moule",
         "attacks": [
-            "Boul'Armure",
-            "Griffe",
-            "Affutage"
+            "Affutage",
+            "Griffe"
         ],
         "stats": {
-            "pv": 78,
-            "atk": 43,
-            "atkspe": 38,
-            "def": 73,
-            "defspe": 67,
-            "spe": 33
+            "pv": 74,
+            "atk": 39,
+            "atkspe": 34,
+            "def": 69,
+            "defspe": 63,
+            "spe": 29
         }
     }
 }
