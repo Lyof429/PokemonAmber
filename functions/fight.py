@@ -107,7 +107,6 @@ def catch(ball, trainer = None, path = 'data/temp.json'):
         if account.has(trainer, ball):
             account.add(trainer, ball, -1)
         else:
-            print(f"Vous n'avez plus de {upfirst(ball)}s!")
             return False
     
     pokemon = getdata(path)['info']['name']

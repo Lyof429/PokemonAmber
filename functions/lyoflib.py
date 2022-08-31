@@ -28,6 +28,10 @@ def setdata(path, value):
 def upfirst(text):
     return text[0].upper() + text[1:len(text)]
 
-def show(path):
-    with Image.open(path) as img:
-        img.show()
+def show(path, console=True):
+    if console:
+        plt.imshow(img.imread(path))
+        plt.show()
+    else:
+        with Image.open(path) as image:
+            image.show()

@@ -1,28 +1,29 @@
 {
     "info": {
-        "name": "Apitrini",
+        "name": "Microu",
         "nickname": "",
         "other": "",
         "gender": "\u2640"
     },
     "leveling": {
-        "level": 6,
+        "level": 5,
         "xp": 0,
-        "type": "normal"
+        "type": "fast"
     },
     "fight": {
-        "ability": "Cherche Miel",
+        "ability": "Brise-Moule",
         "attacks": [
-            "Tornade",
-            "Doux Parfum"
+            "Boul'Armure",
+            "Griffe",
+            "Affutage"
         ],
         "stats": {
-            "pv": 40,
-            "atk": 40,
-            "atkspe": 40,
-            "def": 52,
-            "defspe": 52,
-            "spe": 80
+            "pv": 78,
+            "atk": 43,
+            "atkspe": 38,
+            "def": 73,
+            "defspe": 67,
+            "spe": 33
         }
     }
 }
