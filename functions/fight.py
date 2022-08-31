@@ -1,6 +1,6 @@
 from functions.libs import *
 
-def generate(place, path = 'data/temp.json'):
+def generate(place, path = 'data/temp.json', show = False):
     place_data = getdata(f'data/location/{place}.json')
     
     
@@ -24,20 +24,22 @@ def generate(place, path = 'data/temp.json'):
     for i in range(min(4, len(a))):
         j = randint(0, len(a)-1)
         attacks += f'{a[j]} - '
-        del(a[j])
-    del(a)
+        del a[j]
+    del a
     attacks = attacks[0:len(attacks)-3]
     
     ability = chance(poke_data['abilities'])
-    
-    #print(f'{name}{bonus}{gender} -  Lv {lvl}\n{ability}  |  {attacks}\n')
-    print(f'Un {name}{bonus} (Lv {lvl}) sauvage apparait!')
-    RESULT = {'info': {'name': name, 'nickname': '', 'other': bonus, 'gender': gender.replace(' ', '')},
+
+    if show:
+        print(f'{name}{bonus}{gender} -  Lv {lvl}\n{ability}  |  {attacks}\n')
+    else:
+        print(f'Un {name}{bonus} (Lv {lvl}) sauvage apparait!\n')
+    result = {'info': {'name': name, 'nickname': '', 'other': bonus, 'gender': gender.replace(' ', '')},
               'leveling': {'level': lvl, 'xp': 0, 'type': poke_data['level_type'] if 'level_type' in poke_data.keys() else 'simple'},
               'fight': {'ability': ability, 'attacks': attacks.split(' - '), 'stats': {}}}
-    setdata(path, RESULT)
+    setdata(path, result)
     refreshstats(path)
-    return RESULT
+    return getdata(path)
 
 def addxp(amount, path = 'data/temp.json'):
     poke_data = getdata(path)
@@ -75,12 +77,12 @@ def addxp(amount, path = 'data/temp.json'):
     #refreshstats(path)
 
 def getxpneed(poke_data):
-    if poke_data['leveling']['type'] == 'simple':
-        need = poke_data['leveling']['level'] ** 3
-    elif poke_data['leveling']['type'] == 'fast':
+    if poke_data['leveling']['type'] == 'fast':
         need = 0.8 * (poke_data['leveling']['level'] ** 3)
     elif poke_data['leveling']['type'] == 'slow':
         need = 1.2 * (poke_data['leveling']['level'] ** 3)
+    else: # if poke_data['leveling']['type'] == 'simple':
+        need = poke_data['leveling']['level'] ** 3
     return need
 
 def refreshstats(path = 'data/temp.json'):
@@ -97,11 +99,11 @@ def maxstat(stat, path = 'data/temp.json'):
     temp_data = getdata(path)
     return 2*(temp_data['leveling']['level']-1) + poke_data['stats'][stat]
 
-def getDamage(lv, att, déf, puis, cm):
-    return round((((lv*0.4+2)*att*puis)/(déf*50)+2)*cm*randomize(0.85, 1))
+def getdamage(lv, att, df, puis, cm):
+    return round((((lv*0.4+2)*att*puis)/(df*50)+2)*cm*randomize(0.85, 1))
 
 def catch(ball, trainer = None, path = 'data/temp.json'):
-    if trainer != None:
+    if trainer is not None:
         if account.has(trainer, ball):
             account.add(trainer, ball, -1)
         else:

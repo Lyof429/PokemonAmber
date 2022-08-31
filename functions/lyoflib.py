@@ -27,3 +27,7 @@ def setdata(path, value):
 
 def upfirst(text):
     return text[0].upper() + text[1:len(text)]
+
+def show(path):
+    with Image.open(path) as img:
+        img.show()

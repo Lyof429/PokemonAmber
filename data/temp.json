@@ -3,26 +3,26 @@
         "name": "Apitrini",
         "nickname": "",
         "other": "",
-        "gender": "\u2642"
+        "gender": "\u2640"
     },
     "leveling": {
-        "level": 4,
+        "level": 6,
         "xp": 0,
         "type": "normal"
     },
     "fight": {
         "ability": "Cherche Miel",
         "attacks": [
-            "Doux Parfum",
-            "Tornade"
+            "Tornade",
+            "Doux Parfum"
         ],
         "stats": {
-            "pv": 36,
-            "atk": 36,
-            "atkspe": 36,
-            "def": 48,
-            "defspe": 48,
-            "spe": 76
+            "pv": 40,
+            "atk": 40,
+            "atkspe": 40,
+            "def": 52,
+            "defspe": 52,
+            "spe": 80
         }
     }
 }
