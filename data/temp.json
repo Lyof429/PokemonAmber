@@ -1,28 +1,29 @@
 {
     "info": {
-        "name": "Microu",
+        "name": "Fouinette",
         "nickname": "",
         "other": "",
         "gender": "\u2640"
     },
     "leveling": {
-        "level": 3,
+        "level": 4,
         "xp": 0,
-        "type": "fast"
+        "type": "simple"
     },
     "fight": {
-        "ability": "Brise-Moule",
+        "ability": "Fuite",
         "attacks": [
-            "Affutage",
-            "Griffe"
+            "Griffe",
+            "Boul'Armure",
+            "Clairvoyance"
         ],
         "stats": {
-            "pv": 74,
-            "atk": 39,
-            "atkspe": 34,
-            "def": 69,
-            "defspe": 63,
-            "spe": 29
+            "pv": 41,
+            "atk": 52,
+            "atkspe": 41,
+            "def": 40,
+            "defspe": 51,
+            "spe": 26
         }
     }
 }
