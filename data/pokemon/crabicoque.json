@@ -1,0 +1,39 @@
+{
+	"name": "Messange",
+	"gender": 0.5,
+	"catch_rate": 190,
+	"abilities": {
+		"Fermete": 5,
+		"Coque Armure": 5,
+		"Armurouillee": 1
+	},
+	"attacks": {
+		"Taillade": 0,
+		"Boule Roc": 5,
+		"Repli": 7,
+		"Jet de Sable": 11,
+		"Feinte": 13,
+		"Anti-Air": 17,
+		"Poliroche": 19,
+		"Piqure": 23,
+		"Piege de Roc": 24,
+		"Eboulement": 29,
+		"Tranche": 31,
+		"Plaie-Croix": 35,
+		"Exuviation": 37,
+		"Fleau": 41,
+		"Roc-Boulet": 43
+	},
+	"types": [
+		"Insecte",
+		"Roche"
+	],
+	"stats": {
+		"pv": 50,
+		"atk": 65,
+		"atkspe": 35,
+		"def": 85,
+		"defspe": 35,
+		"spe": 55
+	}
+}

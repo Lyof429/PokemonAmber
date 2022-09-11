@@ -1,3 +1,4 @@
 from functions.libs import *
 
-account.delete('Lyof')
+locations = ('amber_mines', 'fearful_forest', 'fearful_forest_entrance', 'route/route1')
+generate(choice(locations))

@@ -1,0 +1,38 @@
+{
+	"name": "Chovsourir",
+	"gender": 0.5,
+	"catch_rate": 190,
+	"abilities": {
+		"Inconscient": 5,
+		"Maladresse": 5,
+		"Simple": 1
+	},
+	"attacks": {
+		"Choc Mental": 0,
+		"Flair": 4,
+		"Tornade": 8,
+		"Assurance": 12,
+		"Creve-Coeur": 15,
+		"Possessif": 19,
+		"Tranch'Air": 21,
+		"Attraction": 25,
+		"Amnesie": 29,
+		"Plenitude": 29,
+		"Lame d'Air": 32,
+		"Prescience": 36,
+		"Psyko": 41,
+		"Effort": 47
+	},
+	"types": [
+		"Psy",
+		"Vol"
+	],
+	"stats": {
+		"pv": 55,
+		"atk": 45,
+		"atkspe": 55,
+		"def": 43,
+		"defspe": 43,
+		"spe": 72
+	}
+}

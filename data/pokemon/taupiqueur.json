@@ -1,0 +1,37 @@
+{
+	"name": "Taupiqueur",
+	"gender": 0.5,
+	"catch_rate": 255,
+	"abilities": {
+		"Voile Sable": 5,
+		"Piege Sable": 5,
+		"Force Sable": 1
+	},
+	"attacks": {
+		"Griffe": 0,
+		"Jet de Sable": 0,
+		"Rugissement": 4,
+		"Etonnement": 7,
+		"Coud'Boue": 10,
+		"Ampleur": 14,
+		"Petisol": 18,
+		"Coup Bas": 22,
+		"Boue-Bombe": 25,
+		"Telluriforce": 28,
+		"Tunnel": 31,
+		"Tranche": 35,
+		"Seisme": 39,
+		"Abime": 43
+	},
+	"types": [
+		"Sol"
+	],
+	"stats": {
+		"pv": 10,
+		"atk": 55,
+		"atkspe": 35,
+		"def": 25,
+		"defspe": 45,
+		"spe": 95
+	}
+}

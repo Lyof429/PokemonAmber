@@ -1,29 +1,30 @@
 {
     "info": {
-        "name": "Fouinette",
+        "name": "Nodulithe",
         "nickname": "",
         "other": "",
         "gender": "\u2640"
     },
     "leveling": {
-        "level": 4,
+        "level": 10,
         "xp": 0,
         "type": "simple"
     },
     "fight": {
-        "ability": "Fuite",
+        "ability": "Armurouillee",
         "attacks": [
-            "Griffe",
-            "Boul'Armure",
-            "Clairvoyance"
+            "Charge",
+            "Coup d'Boule",
+            "Jet de Sable",
+            "Armure"
         ],
         "stats": {
-            "pv": 41,
-            "atk": 52,
-            "atkspe": 41,
-            "def": 40,
-            "defspe": 51,
-            "spe": 26
+            "pv": 73,
+            "atk": 93,
+            "atkspe": 43,
+            "def": 103,
+            "defspe": 43,
+            "spe": 32
         }
     }
 }

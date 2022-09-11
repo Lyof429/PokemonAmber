@@ -1,0 +1,18 @@
+{
+	"name": "Foret Frayante",
+	"pokemons": {
+		"Zarpent": 10,
+		"Aspicot": 15,
+		"Apitrini": 10,
+		"Verpom": 5,
+		"Trompignon": 10,
+		"Chenipotte": 20,
+		"Ningale": 10,
+		"Faie": 5,
+		"Piber": 15
+	},
+	"level_range": {
+		"min": 4,
+		"max": 7
+	}
+}

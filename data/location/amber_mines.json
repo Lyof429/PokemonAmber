@@ -1,0 +1,15 @@
+{
+	"name": "Mines d'Ambre",
+	"pokemons": {
+		"Nodulithe": 25,
+		"Taupiqueur": 10,
+		"Crabicoque": 25,
+		"Tenefix": 10,
+		"Chovsourir": 15,
+		"Griknot": 5
+	},
+	"level_range": {
+		"min": 8,
+		"max": 12
+	}
+}

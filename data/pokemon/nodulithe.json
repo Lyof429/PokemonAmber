@@ -1,0 +1,36 @@
+{
+	"name": "Nodulithe",
+	"gender": 0.5,
+	"catch_rate": 255,
+	"abilities": {
+		"Fermete": 5,
+		"Armurouillee": 5,
+		"Force Sable": 1
+	},
+	"attacks": {
+		"Charge": 0,
+		"Armure": 4,
+		"Jet de Sable": 7,
+		"Coup d'Boule": 10,
+		"Boule Roc": 14,
+		"Coud'Boue": 17,
+		"Mur de Fer": 20,
+		"Anti-Air": 23,
+		"Eboulement": 27,
+		"Piege de Roc": 30,
+		"Tempete de Sable": 33,
+		"Lame de Roc": 36,
+		"Explosion": 40
+	},
+	"types": [
+		"Roche"
+	],
+	"stats": {
+		"pv": 55,
+		"atk": 75,
+		"atkspe": 25,
+		"def": 85,
+		"defspe": 25,
+		"spe": 14
+	}
+}

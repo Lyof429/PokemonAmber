@@ -1,0 +1,33 @@
+{
+	"name": "Griknot",
+	"gender": 0.5,
+	"catch_rate": 45,
+	"abilities": {
+		"Voile Sable": 10,
+		"Peau Dure": 1
+	},
+	"attacks": {
+		"Charge": 0,
+		"Jet de Sable": 3,
+		"Draco-Rage": 7,
+		"Tempete de Sable": 13,
+		"Belier": 15,
+		"Tourbi-Sable": 19,
+		"Tranche": 19,
+		"Dracogriffe": 27,
+		"Tunnel": 31,
+		"Dracocharge": 37
+	},
+	"types": [
+		"Dragon",
+		"Sol"
+	],
+	"stats": {
+		"pv": 58,
+		"atk": 70,
+		"atkspe": 40,
+		"def": 45,
+		"defspe": 45,
+		"spe": 42
+	}
+}
