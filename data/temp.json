@@ -1,30 +1,28 @@
 {
     "info": {
-        "name": "Nodulithe",
+        "name": "Microu",
         "nickname": "",
         "other": "",
         "gender": "\u2640"
     },
     "leveling": {
-        "level": 10,
+        "level": 2,
         "xp": 0,
-        "type": "simple"
+        "type": "fast"
     },
     "fight": {
-        "ability": "Armurouillee",
+        "ability": "Brise-Moule",
         "attacks": [
-            "Charge",
-            "Coup d'Boule",
-            "Jet de Sable",
-            "Armure"
+            "Griffe",
+            "Affutage"
         ],
         "stats": {
-            "pv": 73,
-            "atk": 93,
-            "atkspe": 43,
-            "def": 103,
-            "defspe": 43,
-            "spe": 32
+            "pv": 72,
+            "atk": 37,
+            "atkspe": 32,
+            "def": 67,
+            "defspe": 61,
+            "spe": 27
         }
     }
 }

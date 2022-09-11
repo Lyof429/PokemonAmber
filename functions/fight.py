@@ -2,8 +2,7 @@ from functions.libs import *
 
 def generate(place, path = 'data/temp.json', show = False):
     place_data = getdata(f'data/location/{place}.json')
-    
-    
+
     name = chance(place_data['pokemons'])
     poke_data = getdata(f'data/pokemon/{name.lower()}.json')
     
@@ -33,17 +32,22 @@ def generate(place, path = 'data/temp.json', show = False):
     result = {'info': {'name': name,
                        'nickname': '',
                        'other': bonus,
-                       'gender': gender.replace(' ', '')},
+                       'gender': gender.replace(' ', '')
+                       },
               'leveling': {'level': lvl,
                            'xp': 0,
-                           'type': poke_data['level_type'] if 'level_type' in poke_data.keys() else 'simple'},
+                           'type': poke_data['level_type'] if 'level_type' in poke_data.keys() else 'simple'
+                           },
               'fight': {'ability': ability,
                         'attacks': attacks.split(' - '),
-                        'stats': {}}}
+                        'stats': {}
+                        }
+              }
     setdata(path, result)
     refreshstats(path)
     if show:
-        print(f'   ---- [{place_data["name"]}] ----\n{name}{bonus}{gender} -  Lv {lvl} ({result["leveling"]["xp"]}/{getxpneed(result)})\n{ability}  |  {attacks}')
+        print(f'                                                                                   [{place_data["name"]}]\n'
+              f'{name}{bonus}{gender} -  Lv {lvl} ({result["leveling"]["xp"]}/{getxpneed(result)})\n{ability}  |  {attacks}')
     else:
         print(f'[{place_data["name"]}] Un {name}{bonus} sauvage (Lv {lvl}) apparait!')
     return getdata(path)
