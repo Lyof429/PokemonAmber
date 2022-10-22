@@ -1,13 +1,12 @@
-from json import *
+import json
 from random import *
-from time import *
+from time import sleep
 import os
 
 from pprint import pprint
-from PIL import Image
 import matplotlib.pyplot as plt
 import matplotlib.image as img
 
-from functions.lyoflib import *
+from functions.utils import *
 import functions.trainer as account
-from functions.fight import *
+from functions.management import *

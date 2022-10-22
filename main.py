@@ -1,4 +1,7 @@
 from functions.libs import *
 
 locations = getallfiles('data/location/')
-generate(choice(locations))
+place = choice(locations)
+
+
+generate(place, show=True)

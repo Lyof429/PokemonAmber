@@ -5,11 +5,13 @@ defaultdata = {'info': {'name': '', 'poke_index': 0},
 
 def exists(trainer):
     return os.path.exists(f'users/{trainer.lower()}.json')
+
 def create(trainer):
     if not exists(trainer):
         trainer_data = defaultdata
         trainer_data['info']['name'] = trainer.lower()
         setdata(f'users/{trainer.lower()}.json', trainer_data)
+
 def delete(trainer):
     reset(trainer, True)
     os.remove(f'users/{trainer.lower()}.json')

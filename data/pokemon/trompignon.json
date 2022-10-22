@@ -1,0 +1,39 @@
+{
+	"name": "Trompignon",
+	"gender": 0.5,
+	"catch_rate": 190,
+	"level_type": "normal",
+	"abilities": {
+		"Pose Spore": 10,
+		"Rege-Force": 1
+	},
+	"attacks": {
+		"Vol-Vie": 0,
+		"Croissance": 6,
+		"Etonnement": 8,
+		"Patience": 12,
+		"Mega-Sangsue": 15,
+		"Racines": 18,
+		"Feinte": 20,
+		"Doux Parfum": 24,
+		"Giga-Sangsue": 28,
+		"Toxik": 32,
+		"Synthese": 35,
+		"Bain de Smog": 39,
+		"Lance-Soleil": 43,
+		"Poudre Fureur": 45,
+		"Spore": 50
+	},
+	"types": [
+		"Plante",
+		"Poison"
+	],
+	"stats": {
+		"pv": 69,
+		"atk": 55,
+		"atkspe": 55,
+		"def": 45,
+		"defspe": 55,
+		"spe": 15
+	}
+}
