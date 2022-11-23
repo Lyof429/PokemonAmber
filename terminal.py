@@ -21,7 +21,7 @@ while command != '.stop':
               '.user [name] >> Set user'
               '.wild (path) >> Generate a Pokemon from your current location')
     elif command == '.map':
-        show('assets/sprites/map.png')
+        show('assets/sprites/map/map.png')
 
     elif command[0:5] == '.move':
         if account.exists(user):

@@ -18,19 +18,22 @@ def delete(trainer):
 
 def reset(trainer, delete=False):
     if delete:
-        index = getdata(f'users/{trainer.lower()}.json')['info']['poke_index']
+        index = get(trainer)['info']['poke_index']
         for i in range(index):
             os.remove(f'users/pokemons/{trainer.lower()}.{i}.json')
     os.remove(f'users/{trainer.lower()}.json')
     create(trainer)
 
+def get(trainer):
+    return getdata(f'users/{trainer.lower()}.json')
+
 def add(trainer, item, amount=1):
-    trainer = getdata(f'users/{trainer.lower()}.json')
+    trainer = get(trainer)
     trainer['bag'][item] = max(trainer['bag'][item]+amount if item in trainer['bag'].keys() else amount, 0)
     setdata(f'users/{trainer["info"]["name"].lower()}.json', trainer)
 
 def has(trainer, item, amount=1):
-    trainer = getdata(f'users/{trainer.lower()}.json')
+    trainer = get(trainer)
     if item in trainer['bag'].keys() and trainer['bag'][item] >= amount:
         return True
     else:
@@ -38,7 +41,6 @@ def has(trainer, item, amount=1):
         return False
 
 def buy(trainer, item, amount=1):
-    trainer_data = getdata(f'users/{trainer.lower()}.json')
     item_data = getdata(f'data/item/{item}.json')
     price = item_data['price']
     if has(trainer, 'pokedollar', price*amount):

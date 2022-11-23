@@ -4,9 +4,10 @@ from time import sleep
 import os
 
 from pprint import pprint
-import matplotlib.pyplot as plt
-import matplotlib.image as img
+import matplotlib.pyplot
+import matplotlib.image
 
 from functions.utils import *
-import functions.trainer as account
-from functions.management import *
+import functions.interface.trainer as account
+from functions.interface.texts import *
+from functions.pokemon.management import *

@@ -1,28 +1,28 @@
 {
     "info": {
-        "name": "Microu",
+        "name": "Aspicot",
         "nickname": "",
         "other": [],
         "gender": "\u2640"
     },
     "leveling": {
-        "level": 2,
+        "level": 5,
         "xp": 0,
         "type": "fast"
     },
     "fight": {
-        "ability": "Brise-Moule",
+        "ability": "Ecran Poudre",
         "attacks": [
-            "Griffe",
-            "Affutage"
+            "Dard Venin",
+            "Secretion"
         ],
         "stats": {
-            "pv": 72,
-            "atk": 37,
-            "atkspe": 32,
-            "def": 67,
-            "defspe": 61,
-            "spe": 27
+            "pv": 48,
+            "atk": 43,
+            "atkspe": 28,
+            "def": 38,
+            "defspe": 28,
+            "spe": 58
         }
     }
 }

@@ -4,4 +4,6 @@ locations = getallfiles('data/location/')
 place = choice(locations)
 
 
-generate(place, show=True)
+x = generate_place(place)
+print(x)
+print(generate_poke(x['info']['name'], x['leveling']['level']))

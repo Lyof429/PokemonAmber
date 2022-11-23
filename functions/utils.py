@@ -30,14 +30,14 @@ def upfirst(text):
     return text[0].upper() + text[1:len(text)]
 
 def show(path):
-    plt.imshow(img.imread(path))
-    plt.show()
+    matplotlib.pyplot.imshow(matplotlib.image.imread(path))
+    matplotlib.pyplot.show()
 
 def getallfiles(path, useend=False, ending='.json', sub=''):
     result = []
     for i in os.listdir(path):
         if len(i.split('.')) < 2:
             result += getallfiles(path+i, sub=sub+i+'/')
-        elif ending in i:
+        elif i.endswith(ending):
             result.append(sub+i if useend else sub+i.replace(ending, ''))
     return result

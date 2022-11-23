@@ -1,10 +1,23 @@
 from functions.libs import *
 
 
-def generate(place, path='data/temp.json', show=False):
+def generate_place(place, path='data/temp.json', show=False):
     place_data = getdata(f'data/location/{place}.json')
 
     name = chance(place_data['pokemons'])
+    lvl = randint(place_data['level_range']['min'], place_data['level_range']['max'])
+
+    poke = generate_poke(name, lvl)
+
+    if show:
+        print(f'{name} {each(poke["info"]["other"])} {poke["info"]["gender"]} -  Lv {lvl} ({poke["leveling"]["xp"]}/{getxpneed(poke)})'
+              f'\t\t\t\t\t\t\t\t\t\t[{place_data["name"]}]'
+              f'\n{poke["fight"]["ability"]}  |  {each(poke["fight"]["attacks"], " - ")}')
+    else:
+        print(f'[{place_data["name"]}] Un {name}{each(poke["info"]["other"])} sauvage (Lv {lvl}) apparait!')
+    return getdata(path)
+
+def generate_poke(name, level=0, path='data/temp.json'):
     poke_data = getdata(f'data/pokemon/{name.lower()}.json')
 
     bonus = ''
@@ -17,7 +30,10 @@ def generate(place, path='data/temp.json', show=False):
     if 'gender' in poke_data.keys():
         gender = (' ♀ ', ' ♂ ')[random() < poke_data['gender']]
 
-    lvl = randint(place_data['level_range']['min'], place_data['level_range']['max'])
+    if level != 0:
+        lvl = level
+    else:
+        lvl = 5
 
     a = [i for i in poke_data['attacks'].keys() if poke_data['attacks'][i] <= lvl]
     attacks = ''
@@ -46,12 +62,6 @@ def generate(place, path='data/temp.json', show=False):
               }
     setdata(path, result)
     refreshstats(path)
-    if show:
-        print(f'{name}{bonus}{gender} -  Lv {lvl} ({result["leveling"]["xp"]}/{getxpneed(result)})'
-              f'\t\t\t\t\t\t\t\t\t\t[{place_data["name"]}]'
-              f'\n{ability}  |  {attacks}')
-    else:
-        print(f'[{place_data["name"]}] Un {name}{bonus} sauvage (Lv {lvl}) apparait!')
     return getdata(path)
 
 

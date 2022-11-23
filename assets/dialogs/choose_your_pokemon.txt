@@ -1,0 +1,12 @@
+*@trainername entre dans le Labroratoire Pokemon*
+Prof. Mandra: Ou est ce que j'ai encore fichu ces Pokeballs...
+Prof. Mandra: Et @trainername qui va arriver d'une minute a l'autre...
+@trainername: ...
+Assistant: Prof! Vous avez recu de nouveaux Messanges!
+Assistant: Je vous les met ou?
+Prof. Mandra: C'est pas le moment!
+Assistant: Ok ok... Je vous les pose a cote de la porte.
+Assistant: Oh, salut @trainername!
+*L'assistant sort de la piece*
+Prof. Mandra: Hein? Depuis quand tu es la?
+Prof. Mandra: Bon, ca ne fait rien. Je viens de retrouver les Pokemons que je dois te confier, alors choisis en un.
