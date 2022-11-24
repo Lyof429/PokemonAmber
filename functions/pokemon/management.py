@@ -1,4 +1,7 @@
-from functions.libs import *
+import functions.interface.trainer as account
+from functions.utils import *
+from random import randint
+from time import sleep
 
 
 def generate_place(place, path='data/temp.json', show=False):
@@ -134,8 +137,8 @@ def getdamage(lv, att, df, puis, cm):
 
 def catch(ball, trainer=None, path='data/temp.json'):
     if trainer is not None:
-        if account.has(trainer, ball):
-            account.add(trainer, ball, -1)
+        if account.bag_has(trainer, ball):
+            account.bag_add(trainer, ball, -1)
         else:
             return False
 
@@ -161,10 +164,6 @@ def catch(ball, trainer=None, path='data/temp.json'):
     if trainer is not None and result:
         pokemon = getdata(path)
         pokemon['info']['ball'] = ball
-        pokemon['info']['nickname'] = input(f'Entrez le nom de votre {pokemon["info"]["name"]}: ')
-        trainer = getdata(f'users/{trainer.lower()}.json')
-        setdata(f'users/pokemons/{trainer["info"]["name"]}.{trainer["info"]["poke_index"]}.json', pokemon)
-        trainer["info"]['poke_index'] += 1
-        setdata(f'users/{trainer["info"]["name"]}.json', trainer)
+        account.poke_add(trainer, pokemon)
     print('\n')
     return result

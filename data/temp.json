@@ -1,28 +1,28 @@
 {
     "info": {
-        "name": "Aspicot",
+        "name": "Zarpent",
         "nickname": "",
         "other": [],
-        "gender": "\u2640"
+        "gender": ""
     },
     "leveling": {
-        "level": 5,
+        "level": 2,
         "xp": 0,
-        "type": "fast"
+        "type": "simple"
     },
     "fight": {
-        "ability": "Ecran Poudre",
+        "ability": "Paratonerre",
         "attacks": [
-            "Dard Venin",
-            "Secretion"
+            "Eclair",
+            "Jet de Sable"
         ],
         "stats": {
-            "pv": 48,
-            "atk": 43,
-            "atkspe": 28,
-            "def": 38,
-            "defspe": 28,
-            "spe": 58
+            "pv": 32,
+            "atk": 52,
+            "atkspe": 62,
+            "def": 32,
+            "defspe": 42,
+            "spe": 82
         }
     }
 }

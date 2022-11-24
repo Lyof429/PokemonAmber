@@ -3,7 +3,12 @@ from functions.libs import *
 locations = getallfiles('data/location/')
 place = choice(locations)
 
+# account.create('Lyof')
+# account.poke_add('Lyof', generate_place(place))
+generate_place(place)
 
-x = generate_place(place)
-print(x)
-print(generate_poke(x['info']['name'], x['leveling']['level']))
+test = Pokemon()
+print(test.data, test.savepath)
+test.load('users/pokemons/lyof.0.json')
+print(test.data, test.savepath)
+test.save('data/temp.json')

@@ -1,4 +1,8 @@
-from functions.libs import *
+from random import choice, random
+import json
+import os
+import matplotlib.pyplot
+import matplotlib.image
 
 def chance(d):
     l = []
