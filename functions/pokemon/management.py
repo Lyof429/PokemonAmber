@@ -10,7 +10,7 @@ def generate_place(place, path='data/temp.json', show=False):
     name = chance(place_data['pokemons'])
     lvl = randint(place_data['level_range']['min'], place_data['level_range']['max'])
 
-    poke = generate_poke(name, lvl)
+    poke = generate_poke(name, lvl, path)
 
     if show:
         print(f'{name} {each(poke["info"]["other"])} {poke["info"]["gender"]} -  Lv {lvl} ({poke["leveling"]["xp"]}/{getxpneed(poke)})'

@@ -6,7 +6,7 @@ def dialog(file, trainer=None):
 
     if trainer is not None:
         trainer_name = account.get(trainer)['info']['name']
-        file = file.replace('@trainername', upfirst(trainer_name))
+        file = file.replace('@trainername', trainer_name.title())
 
     for line in file.split('\n'):
         input(line)

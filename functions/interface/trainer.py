@@ -37,7 +37,7 @@ def bag_has(trainer, item, amount=1):
     if item in trainer['bag'].keys() and trainer['bag'][item] >= amount:
         return True
     else:
-        print(f"Vous n'avez pas assez de {upfirst(item)}s!")
+        print(f"Vous n'avez pas assez de {item.title()}s!")
         return False
 
 def bag_buy(trainer, item, amount=1):

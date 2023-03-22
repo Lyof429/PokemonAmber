@@ -30,8 +30,6 @@ def setdata(path, value):
     strvalue = json.dumps(value, indent=4)
     open(path, 'w').write(strvalue)
 
-def upfirst(text):
-    return text[0].upper() + text[1:len(text)]
 
 def show(path):
     matplotlib.pyplot.imshow(matplotlib.image.imread(path))

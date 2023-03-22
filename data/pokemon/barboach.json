@@ -1,0 +1,34 @@
+{
+    "name": "Barboach",
+    "gender": 0.5,
+    "catch_rate": 100,
+    "abilities": {
+        "Oblivious": 5,
+        "Anticipation": 5,
+        "Hydration": 1
+    },
+    "attacks": {
+        "Water Gun": 1,
+        "Fissure": 48,
+        "Snore": 6,
+        "Magnitude": 20,
+        "Future Sight": 42,
+        "Mud Sport": 6,
+        "Muddy Water": 31,
+        "Water Sport": 6,
+        "Aqua Tail": 24,
+        "Mud Bomb": 13
+    },
+    "types": [
+        "Water",
+        "Ground"
+    ],
+    "stats": {
+        "pv": 50,
+        "atk": 48,
+        "def": 43,
+        "atkspe": 46,
+        "defspe": 41,
+        "spe": 60
+    }
+}
