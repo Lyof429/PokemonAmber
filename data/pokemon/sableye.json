@@ -1,0 +1,38 @@
+{
+    "name": "Sableye",
+    "gender": 0.5,
+    "catch_rate": 100,
+    "abilities": {
+        "Keen Eye": 5,
+        "Stall": 5,
+        "Prankster": 1
+    },
+    "attacks": {
+        "Scratch": 1,
+        "Leer": 1,
+        "Disable": 15,
+        "Fury Swipes": 24,
+        "Feint Attack": 19,
+        "Foresight": 4,
+        "Detect": 18,
+        "Mean Look": 36,
+        "Fake Out": 12,
+        "Knock Off": 27,
+        "Astonish": 3,
+        "Punishment": 24,
+        "Shadow Sneak": 9,
+        "Quash": 30
+    },
+    "types": [
+        "Tenebre",
+        "Spectre"
+    ],
+    "stats": {
+        "pv": 50,
+        "atk": 75,
+        "def": 75,
+        "atkspe": 65,
+        "defspe": 65,
+        "spe": 50
+    }
+}

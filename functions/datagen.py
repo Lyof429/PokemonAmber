@@ -1,6 +1,4 @@
 import requests
-import os
-from pprint import pprint
 from functions.utils import *
 
 
@@ -28,7 +26,7 @@ def pokemon(name):
     for a in raw['abilities']:
         c = 10 if len(a.keys()) == 2 else 5
         c = 1 if a['is_hidden'] else c
-        new['abilities'][a['ability']['name'].title()] = c
+        new['abilities'][a['ability']['name'].title().replace('-', ' ')] = c
 
     new['attacks'] = {}
     for m in raw['moves']:
@@ -36,9 +34,10 @@ def pokemon(name):
             new['attacks'][m['move']['name'].title().replace('-', ' ')] = m['version_group_details'][-1][
                 'level_learned_at']
 
+    types = {'Water': 'Eau', 'Fire': 'Feu', 'Grass': 'Plante', 'Psychic': 'Psy', 'Dark': 'Tenebre', 'Ghost': 'Spectre', 'Flying': 'Vol'}
     new['types'] = []
     for t in raw['types']:
-        new['types'].append(t['type']['name'].title())
+        new['types'].append(types.get(t['type']['name'].title(), t['type']['name'].title()))
 
     stats = {'hp': 'pv', 'attack': 'atk', 'defense': 'def', 'special-attack': 'atkspe', 'special-defense': 'defspe', 'speed': 'spe'}
     new['stats'] = {}
@@ -48,3 +47,4 @@ def pokemon(name):
 
     if not os.path.exists(f'data/pokemon/{name}.json'):
         setdata(f'data/pokemon/{name}.json', new)
+    return new

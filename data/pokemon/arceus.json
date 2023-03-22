@@ -1,0 +1,33 @@
+{
+    "name": "Arceus",
+    "gender": 0.5,
+    "catch_rate": 100,
+    "abilities": {
+        "Multitype": 5
+    },
+    "attacks": {
+        "Seismic Toss": 1,
+        "Recover": 70,
+        "Perish Song": 90,
+        "Extreme Speed": 40,
+        "Future Sight": 60,
+        "Refresh": 50,
+        "Cosmic Power": 1,
+        "Gravity": 10,
+        "Healing Wish": 50,
+        "Natural Gift": 1,
+        "Punishment": 1,
+        "Judgment": 100
+    },
+    "types": [
+        "Normal"
+    ],
+    "stats": {
+        "pv": 120,
+        "atk": 120,
+        "def": 120,
+        "atkspe": 120,
+        "defspe": 120,
+        "spe": 120
+    }
+}

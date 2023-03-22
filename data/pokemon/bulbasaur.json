@@ -1,0 +1,36 @@
+{
+    "name": "Bulbasaur",
+    "gender": 0.5,
+    "catch_rate": 100,
+    "abilities": {
+        "Overgrow": 5,
+        "Chlorophyll": 1
+    },
+    "attacks": {
+        "Vine Whip": 3,
+        "Tackle": 1,
+        "Take Down": 21,
+        "Double Edge": 33,
+        "Growl": 1,
+        "Leech Seed": 9,
+        "Growth": 6,
+        "Razor Leaf": 12,
+        "Poison Powder": 15,
+        "Sleep Powder": 15,
+        "Sweet Scent": 24,
+        "Synthesis": 27,
+        "Worry Seed": 30
+    },
+    "types": [
+        "Plante",
+        "Poison"
+    ],
+    "stats": {
+        "pv": 45,
+        "atk": 49,
+        "def": 49,
+        "atkspe": 65,
+        "defspe": 65,
+        "spe": 45
+    }
+}

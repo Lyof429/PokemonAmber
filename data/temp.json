@@ -1,28 +1,30 @@
 {
     "info": {
-        "name": "Zarpent",
+        "name": "Mew",
         "nickname": "",
         "other": [],
-        "gender": ""
+        "gender": "\u2642"
     },
     "leveling": {
-        "level": 2,
+        "level": 50,
         "xp": 0,
         "type": "simple"
     },
     "fight": {
-        "ability": "Paratonerre",
+        "ability": "Synchronize",
         "attacks": [
-            "Eclair",
-            "Jet de Sable"
+            "Confusion",
+            "Life Dew",
+            "Pound",
+            "Mimic"
         ],
         "stats": {
-            "pv": 32,
-            "atk": 52,
-            "atkspe": 62,
-            "def": 32,
-            "defspe": 42,
-            "spe": 82
+            "pv": 198,
+            "atk": 198,
+            "def": 198,
+            "atkspe": 198,
+            "defspe": 198,
+            "spe": 198
         }
     }
 }

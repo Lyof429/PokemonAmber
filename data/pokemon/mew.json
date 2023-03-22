@@ -1,0 +1,31 @@
+{
+    "name": "Mew",
+    "gender": 0.5,
+    "catch_rate": 100,
+    "abilities": {
+        "Synchronize": 5
+    },
+    "attacks": {
+        "Pound": 1,
+        "Confusion": 1,
+        "Mimic": 1,
+        "Barrier": 44,
+        "Transform": 80,
+        "Psywave": 33,
+        "Ancient Power": 30,
+        "Me First": 70,
+        "Reflect Type": 1,
+        "Life Dew": 40
+    },
+    "types": [
+        "Psy"
+    ],
+    "stats": {
+        "pv": 100,
+        "atk": 100,
+        "def": 100,
+        "atkspe": 100,
+        "defspe": 100,
+        "spe": 100
+    }
+}

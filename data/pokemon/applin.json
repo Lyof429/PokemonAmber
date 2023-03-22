@@ -1,0 +1,26 @@
+{
+    "name": "Applin",
+    "gender": 0.5,
+    "catch_rate": 100,
+    "abilities": {
+        "Ripen": 5,
+        "Gluttony": 5,
+        "Bulletproof": 1
+    },
+    "attacks": {
+        "Withdraw": 1,
+        "Astonish": 1
+    },
+    "types": [
+        "Plante",
+        "Dragon"
+    ],
+    "stats": {
+        "pv": 40,
+        "atk": 40,
+        "def": 80,
+        "atkspe": 40,
+        "defspe": 40,
+        "spe": 20
+    }
+}

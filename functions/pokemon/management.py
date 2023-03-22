@@ -1,4 +1,5 @@
 import functions.interface.trainer as account
+import functions.datagen as datagen
 from functions.utils import *
 from random import randint
 from time import sleep
@@ -21,7 +22,10 @@ def generate_place(place, path='data/temp.json', show=False):
     return getdata(path)
 
 def generate_poke(name, level=0, path='data/temp.json'):
-    poke_data = getdata(f'data/pokemon/{name.lower()}.json')
+    try:
+        poke_data = getdata(f'data/pokemon/{name.lower()}.json')
+    except FileNotFoundError:
+        poke_data = datagen.pokemon(name.lower())
 
     bonus = ''
     if 'variants' in poke_data.keys():

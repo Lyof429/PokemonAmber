@@ -1,0 +1,38 @@
+{
+    "name": "Charizard",
+    "gender": 0.5,
+    "catch_rate": 100,
+    "abilities": {
+        "Blaze": 5,
+        "Solar Power": 1
+    },
+    "attacks": {
+        "Scratch": 1,
+        "Wing Attack": 1,
+        "Leer": 15,
+        "Growl": 1,
+        "Ember": 1,
+        "Counter": 1,
+        "Dragon Rage": 26,
+        "Rage": 20,
+        "Smokescreen": 1,
+        "Fury Swipes": 20,
+        "Slash": 24,
+        "Dragon Breath": 12,
+        "Metal Claw": 13,
+        "Flame Burst": 32,
+        "Inferno": 54
+    },
+    "types": [
+        "Feu",
+        "Vol"
+    ],
+    "stats": {
+        "pv": 78,
+        "atk": 84,
+        "def": 78,
+        "atkspe": 109,
+        "defspe": 85,
+        "spe": 100
+    }
+}
